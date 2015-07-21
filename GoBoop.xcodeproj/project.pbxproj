@@ -13,6 +13,8 @@
 		4439DE0E1B5E9E6F00F1A87C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4439DE0D1B5E9E6F00F1A87C /* Images.xcassets */; };
 		4439DE111B5E9E6F00F1A87C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */; };
 		4439DE1D1B5E9E6F00F1A87C /* GoBoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */; };
+		4439DE271B5E9EB500F1A87C /* BoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE261B5E9EB500F1A87C /* BoopViewController.swift */; };
+		4439DE291B5EA56D00F1A87C /* UIIMageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		4439DE161B5E9E6F00F1A87C /* GoBoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBoopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4439DE1B1B5E9E6F00F1A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBoopTests.swift; sourceTree = "<group>"; };
+		4439DE261B5E9EB500F1A87C /* BoopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoopViewController.swift; sourceTree = "<group>"; };
+		4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIMageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */,
 				4439DE081B5E9E6F00F1A87C /* ViewController.swift */,
+				4439DE261B5E9EB500F1A87C /* BoopViewController.swift */,
+				4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */,
 				4439DE0A1B5E9E6F00F1A87C /* Main.storyboard */,
 				4439DE0D1B5E9E6F00F1A87C /* Images.xcassets */,
 				4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */,
@@ -214,6 +220,8 @@
 			files = (
 				4439DE091B5E9E6F00F1A87C /* ViewController.swift in Sources */,
 				4439DE071B5E9E6F00F1A87C /* AppDelegate.swift in Sources */,
+				4439DE271B5E9EB500F1A87C /* BoopViewController.swift in Sources */,
+				4439DE291B5EA56D00F1A87C /* UIIMageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

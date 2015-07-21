@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+
+        self.performSegueWithIdentifier("boopViewSegue", sender: self)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
