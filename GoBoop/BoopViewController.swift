@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import CoreGraphics
+import QuartzCore
 
 
 class BoopViewController: UIViewController {
@@ -43,12 +44,16 @@ class BoopViewController: UIViewController {
         // Replaces hotspot image with one resized to the screen size
         let screenRect = UIScreen.mainScreen().bounds
         println("Screen Rect = \(screenRect)")
-        UIGraphicsBeginImageContextWithOptions(screenRect.size, false, 1.0)
+//        let hotSpotSnapshotView = hotSpot.snapshotViewAfterScreenUpdates(true)
+        
+        UIGraphicsBeginImageContext(screenRect.size)
         let context = UIGraphicsGetCurrentContext()
-//        hotSpot.contentMode = UIViewContentMode.ScaleAspectFit
+        hotSpot.contentMode = UIViewContentMode.ScaleAspectFit
         hotSpot.layer.renderInContext(context)
+        hotSpot.drawViewHierarchyInRect(hotSpot.bounds, afterScreenUpdates: true)
         let theImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        println("The Image from Context size = \(theImage.size)")
         hotSpot.image = theImage
         println("Hotspot image size = \(hotSpot.image?.size)")
     }
