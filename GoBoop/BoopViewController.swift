@@ -46,16 +46,25 @@ class BoopViewController: UIViewController {
         println("Screen Rect = \(screenRect)")
 //        let hotSpotSnapshotView = hotSpot.snapshotViewAfterScreenUpdates(true)
         
-        UIGraphicsBeginImageContext(screenRect.size)
+        UIGraphicsBeginImageContextWithOptions(screenRect.size, false, 1.0)
         let context = UIGraphicsGetCurrentContext()
         hotSpot.contentMode = UIViewContentMode.ScaleAspectFit
         hotSpot.layer.renderInContext(context)
-        hotSpot.drawViewHierarchyInRect(hotSpot.bounds, afterScreenUpdates: true)
+//        hotSpot.drawViewHierarchyInRect(hotSpot.bounds, afterScreenUpdates: true)
         let theImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         println("The Image from Context size = \(theImage.size)")
         hotSpot.image = theImage
         println("Hotspot image size = \(hotSpot.image?.size)")
+        let documentsFolderPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
+        println(documentsFolderPath)
+        let filename = "Cloofy4boop.png"
+        let writePath = documentsFolderPath + filename
+        let data: NSData = UIImagePNGRepresentation(hotSpot.image!)
+        data.writeToFile(writePath, atomically: true)
+
+        hotSpot.image = UIImage(contentsOfFile: writePath)
+        
     }
     
     func handleTap(UIGestureRecognizer) {

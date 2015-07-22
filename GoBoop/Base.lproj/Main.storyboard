@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloofy2boop" translatesAutoresizingMaskIntoConstraints="NO" id="sum-dW-23u">
+                            <imageView contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocumentsCloofy4boop" translatesAutoresizingMaskIntoConstraints="NO" id="sum-dW-23u">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
@@ -77,6 +77,6 @@
     </scenes>
     <resources>
         <image name="Cloofy1-Round-855" width="855" height="855"/>
-        <image name="Cloofy2boop" width="2448" height="2448"/>
+        <image name="DocumentsCloofy4boop" width="375" height="667"/>
     </resources>
 </document>
