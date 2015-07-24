@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441526811B604AA0000A9D2C /* Boop2Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 441526801B604A9A000A9D2C /* Boop2Sound.caf */; };
 		4439DE071B5E9E6F00F1A87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */; };
 		4439DE091B5E9E6F00F1A87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE081B5E9E6F00F1A87C /* ViewController.swift */; };
 		4439DE0C1B5E9E6F00F1A87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4439DE0A1B5E9E6F00F1A87C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441526801B604A9A000A9D2C /* Boop2Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop2Sound.caf; sourceTree = "<group>"; };
 		4439DE011B5E9E6F00F1A87C /* GoBoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4439DE051B5E9E6F00F1A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4415267F1B604A65000A9D2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				441526801B604A9A000A9D2C /* Boop2Sound.caf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4439DDF81B5E9E6F00F1A87C = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		4439DE041B5E9E6F00F1A87C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4415267F1B604A65000A9D2C /* Resources */,
 				4439DE051B5E9E6F00F1A87C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4439DE0C1B5E9E6F00F1A87C /* Main.storyboard in Resources */,
+				441526811B604AA0000A9D2C /* Boop2Sound.caf in Resources */,
 				4439DE111B5E9E6F00F1A87C /* LaunchScreen.xib in Resources */,
 				4439DE0E1B5E9E6F00F1A87C /* Images.xcassets in Resources */,
 			);
@@ -351,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoBoop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoBoop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -419,6 +433,7 @@
 				4439DE221B5E9E6F00F1A87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4439DE231B5E9E6F00F1A87C /* Build configuration list for PBXNativeTarget "GoBoopTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +442,7 @@
 				4439DE251B5E9E6F00F1A87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
