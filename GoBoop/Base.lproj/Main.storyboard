@@ -70,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="noseAnimation" destination="UNg-59-g3v" id="hRF-2v-6lS"/>
+                        <outlet property="pointingFinger" destination="zfY-MY-MkY" id="a9A-ya-6lJ"/>
                         <segue destination="3Dx-mv-94N" kind="show" identifier="boopViewSegue" id="2UE-vs-usj"/>
                     </connections>
                 </viewController>
