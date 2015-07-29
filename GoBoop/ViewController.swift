@@ -13,25 +13,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var noseAnimation: UIImageView!
     @IBOutlet weak var pointingFinger: UIImageView!
+    @IBOutlet weak var pointingFingerXConstraint: NSLayoutConstraint!
     let ukePlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
- 
+        self.noseAnimation.hidden = true
+
     }
     
 //    override func viewWillAppear(animated: Bool) {
 //    }
     
     override func viewDidAppear(animated: Bool) {
-        let screenCenterV = CGFloat(UIScreen.mainScreen().bounds.height / 2)
-        let screenCenterH = UIScreen.mainScreen().bounds.width / 2
-        let fingerCenterV = screenCenterV - (pointingFinger.bounds.height / 2)
-        var fingerPoint: CGPoint = CGPointMake(UIScreen.mainScreen().bounds.width - 10.0, fingerCenterV)
-        pointingFinger.frame = CGRectMake(100.0, 100.0, pointingFinger.bounds.width, pointingFinger.bounds.height)
 
-        
         var imageArray: [UIImage] = []
         let image1 = UIImage(named: "NoseImage1")
         let image2 = UIImage(named: "NoseImage2")
@@ -39,11 +35,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         imageArray.append(image1!)
         imageArray.append(image2!)
         imageArray.append(image3!)
-        noseAnimation.animationImages = imageArray
-        noseAnimation.animationRepeatCount = 40
-        noseAnimation.animationDuration = 0.2
-        noseAnimation.startAnimating()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "nextScreen", userInfo: nil, repeats: false)
+        
+        var centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
+        var finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
+
+        UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.view.removeConstraint(self.pointingFingerXConstraint)
+            self.view.addConstraint(centerFingerConstraint)
+            self.view.layoutIfNeeded()
+            }, completion: { bool in
+                UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.view.removeConstraint(centerFingerConstraint)
+                    self.view.addConstraint(finalFingerConstraint)
+                    self.view.layoutIfNeeded()
+                    self.noseAnimation.hidden = false
+                    self.noseAnimation.animationImages = imageArray
+                    self.noseAnimation.animationRepeatCount = 6
+                    self.noseAnimation.animationDuration = 0.2
+                    self.noseAnimation.startAnimating()
+                    var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "nextScreen", userInfo: nil, repeats: false)
+                    }, completion: nil)
+        })
+
+        
+        
     }
     
     func nextScreen() {
