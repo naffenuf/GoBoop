@@ -25,7 +25,7 @@
 		44037DE71B699776008CD550 /* Boop16.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44037DD51B699776008CD550 /* Boop16.caf */; };
 		44037DE81B699776008CD550 /* Boop17.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44037DD61B699776008CD550 /* Boop17.caf */; };
 		44037DE91B699776008CD550 /* Boop18.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44037DD71B699776008CD550 /* Boop18.caf */; };
-		44037DEB1B69A7FB008CD550 /* CloofyTheBoopyDog.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44037DEA1B69A7FB008CD550 /* CloofyTheBoopyDog.caf */; };
+		44037DED1B6A398A008CD550 /* CloofyTheBoopyDog.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44037DEC1B6A398A008CD550 /* CloofyTheBoopyDog.caf */; };
 		441526811B604AA0000A9D2C /* Boop2Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 441526801B604A9A000A9D2C /* Boop2Sound.caf */; };
 		4439DE071B5E9E6F00F1A87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */; };
 		4439DE091B5E9E6F00F1A87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE081B5E9E6F00F1A87C /* ViewController.swift */; };
@@ -66,7 +66,7 @@
 		44037DD51B699776008CD550 /* Boop16.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop16.caf; sourceTree = "<group>"; };
 		44037DD61B699776008CD550 /* Boop17.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop17.caf; sourceTree = "<group>"; };
 		44037DD71B699776008CD550 /* Boop18.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop18.caf; sourceTree = "<group>"; };
-		44037DEA1B69A7FB008CD550 /* CloofyTheBoopyDog.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CloofyTheBoopyDog.caf; sourceTree = "<group>"; };
+		44037DEC1B6A398A008CD550 /* CloofyTheBoopyDog.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CloofyTheBoopyDog.caf; sourceTree = "<group>"; };
 		441526801B604A9A000A9D2C /* Boop2Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop2Sound.caf; sourceTree = "<group>"; };
 		4439DE011B5E9E6F00F1A87C /* GoBoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4439DE051B5E9E6F00F1A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 				44037DD51B699776008CD550 /* Boop16.caf */,
 				44037DD61B699776008CD550 /* Boop17.caf */,
 				44037DD71B699776008CD550 /* Boop18.caf */,
-				44037DEA1B69A7FB008CD550 /* CloofyTheBoopyDog.caf */,
 				441526801B604A9A000A9D2C /* Boop2Sound.caf */,
+				44037DEC1B6A398A008CD550 /* CloofyTheBoopyDog.caf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				44037DE61B699776008CD550 /* Boop15.caf in Resources */,
 				444A95991B62DD5E0050D811 /* Images.xcassets in Resources */,
 				4439DE111B5E9E6F00F1A87C /* LaunchScreen.xib in Resources */,
-				44037DEB1B69A7FB008CD550 /* CloofyTheBoopyDog.caf in Resources */,
+				44037DED1B6A398A008CD550 /* CloofyTheBoopyDog.caf in Resources */,
 				44037DE21B699776008CD550 /* Boop11.caf in Resources */,
 				44037DE11B699776008CD550 /* Boop10.caf in Resources */,
 			);

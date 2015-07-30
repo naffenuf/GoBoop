@@ -39,8 +39,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
         if player == ukePlayer {
-            blackView.hidden = false 
-            nextScreen()
+                self.blackView.hidden = false
+                self.nextScreen()
         }
     }
     
@@ -71,8 +71,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     self.noseAnimation.animationRepeatCount = 6
                     self.noseAnimation.animationDuration = 0.2
                     self.noseAnimation.startAnimating()
-//                    var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "nextScreen", userInfo: nil, repeats: false)
-                    }, completion: nil)
+                    
+                    }, completion: {bool in
+                        self.noseAnimation.hidden = true})
         })
 
         

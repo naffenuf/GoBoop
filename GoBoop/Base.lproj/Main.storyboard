@@ -20,6 +20,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOOFY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-ac-AbJ">
+                                <rect key="frame" x="196" y="0.0" width="199" height="52"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="54"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE BOOPY DOG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-JE-xci">
+                                <rect key="frame" x="112" y="548" width="378" height="44"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="49"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloofy1-Round-Centered" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-kl-1cL">
                                 <rect key="frame" x="61" y="60" width="480" height="480"/>
                                 <constraints>
@@ -32,24 +44,12 @@
                                     <constraint firstAttribute="width" secondItem="UNg-59-g3v" secondAttribute="height" multiplier="1:1" id="hX9-MV-QLc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE BOOPY DOG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-JE-xci">
-                                <rect key="frame" x="112" y="548" width="378" height="44"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="49"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PointingFingerWithSleeve" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-MY-MkY">
                                 <rect key="frame" x="600" y="-42" width="686" height="686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="1:1" id="BHB-IW-6ef"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOOFY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-ac-AbJ">
-                                <rect key="frame" x="196" y="0.0" width="199" height="52"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="54"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be2-eB-fa0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="UNg-59-g3v" firstAttribute="width" secondItem="UNg-59-g3v" secondAttribute="height" multiplier="1:1" id="YbE-DD-YyM"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" id="Zzb-CR-khQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="be2-eB-fa0" secondAttribute="bottom" id="aSs-hg-fg3"/>
-                            <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="fes-bz-UfL"/>
+                            <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" priority="979" id="fes-bz-UfL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q9e-JE-xci" secondAttribute="bottom" constant="8" symbolic="YES" id="gSy-oh-nt0"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="greaterThanOrEqual" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="0.7" id="jYH-hG-hi0"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="right" id="kcf-K6-q7j"/>
@@ -144,25 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flL-FA-J5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422" y="449"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="sOE-Xr-raa">
-            <objects>
-                <viewController id="SuA-AB-cgM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eXu-ka-fkW"/>
-                        <viewControllerLayoutGuide type="bottom" id="gVU-S3-Zbi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9dc-iF-5me">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="16B-8t-jUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2097" y="472"/>
+            <point key="canvasLocation" x="1424" y="476"/>
         </scene>
     </scenes>
     <resources>
