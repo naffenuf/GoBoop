@@ -38,10 +38,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PointingFingerWideImageFile" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-MY-MkY">
-                                <rect key="frame" x="600" y="163" width="1025" height="276"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PointingFingerWithSleeve" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-MY-MkY">
+                                <rect key="frame" x="600" y="-42" width="686" height="686"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="1025:276" id="BHB-IW-6ef"/>
+                                    <constraint firstAttribute="width" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="1:1" id="BHB-IW-6ef"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOOFY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-ac-AbJ">
@@ -50,30 +50,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be2-eB-fa0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="top" secondItem="s5n-ac-AbJ" secondAttribute="bottom" constant="8" symbolic="YES" id="0NU-xY-Zls"/>
+                            <constraint firstItem="be2-eB-fa0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1I7-hx-BK8"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="centerX" secondItem="UNg-59-g3v" secondAttribute="centerX" constant="1" id="5lm-BB-p36"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-76" id="9uy-hs-GaF"/>
+                            <constraint firstItem="q9e-JE-xci" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="B8z-iB-fzg"/>
                             <constraint firstItem="s5n-ac-AbJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Brw-hi-DJg"/>
                             <constraint firstAttribute="centerX" secondItem="s5n-ac-AbJ" secondAttribute="centerX" constant="4.5" id="D5E-0f-NsG"/>
                             <constraint firstAttribute="centerY" secondItem="i2T-kl-1cL" secondAttribute="centerY" id="IJg-Nf-du1"/>
+                            <constraint firstItem="be2-eB-fa0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Lm3-jN-Y5I"/>
                             <constraint firstItem="q9e-JE-xci" firstAttribute="top" secondItem="i2T-kl-1cL" secondAttribute="bottom" constant="8" symbolic="YES" id="Obw-qM-8eM"/>
                             <constraint firstAttribute="centerX" secondItem="q9e-JE-xci" secondAttribute="centerX" constant="-0.5" id="S5t-5X-cCO"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" constant="1" id="Y8p-Jr-gzl"/>
                             <constraint firstItem="UNg-59-g3v" firstAttribute="width" secondItem="UNg-59-g3v" secondAttribute="height" multiplier="1:1" id="YbE-DD-YyM"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" id="Zzb-CR-khQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="be2-eB-fa0" secondAttribute="bottom" id="aSs-hg-fg3"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="fes-bz-UfL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q9e-JE-xci" secondAttribute="bottom" constant="8" symbolic="YES" id="gSy-oh-nt0"/>
-                            <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="greaterThanOrEqual" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="0.3" id="jYH-hG-hi0"/>
+                            <constraint firstItem="i2T-kl-1cL" firstAttribute="height" relation="greaterThanOrEqual" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="0.7" id="jYH-hG-hi0"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="right" id="kcf-K6-q7j"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="height" secondItem="UNg-59-g3v" secondAttribute="height" id="kwu-M0-h7H"/>
                             <constraint firstAttribute="centerX" secondItem="UNg-59-g3v" secondAttribute="centerX" constant="0.5" id="m4d-CL-ewq"/>
                             <constraint firstAttribute="centerX" secondItem="i2T-kl-1cL" secondAttribute="centerX" constant="-0.5" id="oDo-85-UZn"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="width" secondItem="UNg-59-g3v" secondAttribute="width" id="pHd-c6-dgh"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="q9e-JE-xci" secondAttribute="trailing" constant="20" id="qoP-PG-JNY"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" constant="-76" id="txt-ue-wgd"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="u7c-PO-iNR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="be2-eB-fa0" secondAttribute="trailing" constant="-16" id="vXh-1N-jJn"/>
                             <constraint firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" constant="-0.5" id="vfW-Hj-Ck6"/>
                         </constraints>
                         <variation key="default">
@@ -85,6 +95,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="blackView" destination="be2-eB-fa0" id="Rdw-Yc-fVq"/>
                         <outlet property="noseAnimation" destination="UNg-59-g3v" id="hRF-2v-6lS"/>
                         <outlet property="pointingFinger" destination="zfY-MY-MkY" id="a9A-ya-6lJ"/>
                         <outlet property="pointingFingerXConstraint" destination="kcf-K6-q7j" id="GpW-mY-4Zm"/>
@@ -135,12 +146,30 @@
             </objects>
             <point key="canvasLocation" x="1422" y="449"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sOE-Xr-raa">
+            <objects>
+                <viewController id="SuA-AB-cgM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXu-ka-fkW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gVU-S3-Zbi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9dc-iF-5me">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16B-8t-jUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2097" y="472"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cloofy1" width="2313" height="2991"/>
         <image name="Cloofy1-Round-Centered" width="904" height="904"/>
         <image name="DocumentsCloofy4boop" width="375" height="667"/>
         <image name="NoseImage1" width="904" height="904"/>
-        <image name="PointingFingerWideImageFile" width="1024" height="276"/>
+        <image name="PointingFingerWithSleeve" width="1024" height="276"/>
     </resources>
 </document>

@@ -14,20 +14,38 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var noseAnimation: UIImageView!
     @IBOutlet weak var pointingFinger: UIImageView!
     @IBOutlet weak var pointingFingerXConstraint: NSLayoutConstraint!
-    let ukePlayer = AVAudioPlayer()
+    @IBOutlet weak var blackView: UIView!
+    var ukePlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
         self.noseAnimation.hidden = true
 
+        }
+    
+    
+     override func viewWillAppear(animated: Bool) {
+        var error: NSError?
+        let thePath: String = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("CloofyTheBoopyDog.caf")
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath)!
+        if error != nil {
+            println(error)
+        } else {
+            ukePlayer = AVAudioPlayer(contentsOfURL: theURL, error: &error)
+            ukePlayer.delegate = self
+    }
+}
+
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+        if player == ukePlayer {
+            blackView.hidden = false 
+            nextScreen()
+        }
     }
     
-//    override func viewWillAppear(animated: Bool) {
-//    }
-    
     override func viewDidAppear(animated: Bool) {
-
+        ukePlayer.play()
         var imageArray: [UIImage] = []
         let image1 = UIImage(named: "NoseImage1")
         let image2 = UIImage(named: "NoseImage2")
@@ -39,7 +57,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         var centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
         var finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
 
-        UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(1.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.view.removeConstraint(self.pointingFingerXConstraint)
             self.view.addConstraint(centerFingerConstraint)
             self.view.layoutIfNeeded()
@@ -53,7 +71,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     self.noseAnimation.animationRepeatCount = 6
                     self.noseAnimation.animationDuration = 0.2
                     self.noseAnimation.startAnimating()
-                    var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "nextScreen", userInfo: nil, repeats: false)
+//                    var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "nextScreen", userInfo: nil, repeats: false)
                     }, completion: nil)
         })
 

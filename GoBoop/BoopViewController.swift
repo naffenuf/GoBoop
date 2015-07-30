@@ -16,24 +16,19 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var hotSpot: UIImageView!
+    let TOTAL_IMAGES = 10 // change this when adding more images
+    let TOTAL_BOOP_SOUNDS = 18 // change this when adding more boop sound files
     var currentImage = 1
-    let TOTAL_IMAGES = 10 // change this in the program when adding more images
+    let currentBoopSound = 1
     let tapRec = UITapGestureRecognizer()
     var boopPlayer: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set up the boop player
-        var error: NSError?
-        let thePath: String = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("Boop2Sound.caf")
-        let theURL: NSURL = NSURL(fileURLWithPath: thePath)!
-        if error != nil {
-            println(error)
-        } else {
-            boopPlayer = AVAudioPlayer(contentsOfURL: theURL, error: &error)
-            boopPlayer.delegate = self
-        }
+        getRandomBoop()
         
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -96,6 +91,24 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    func getRandomBoop() {
+        let rnd = (arc4random() % 17) + 1 // Change this when adding more boop sounds
+        var filename = "Boop"
+        let boopNumber = String(rnd)
+        filename += boopNumber
+        filename += ".caf"
+        var error: NSError?
+        let thePath: String = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent(filename)
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath)!
+        if error != nil {
+            println(error)
+        } else {
+            boopPlayer = AVAudioPlayer(contentsOfURL: theURL, error: &error)
+            boopPlayer.prepareToPlay()
+            boopPlayer.delegate = self
+        }
+        
+    }
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
         currentImage++
         if currentImage > TOTAL_IMAGES {
@@ -115,7 +128,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
                 duration: 0.4,
                 options: UIViewAnimationOptions.TransitionFlipFromBottom,
                 animations: { self.picture.image = newImage },
-                completion: { finished in self.getHotSpot(); self.hotSpot.hidden = false })
+                completion: { finished in self.getHotSpot(); self.hotSpot.hidden = false; self.getRandomBoop() })
         }
     }
     
