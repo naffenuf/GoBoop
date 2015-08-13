@@ -27,8 +27,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         // Set up the boop player
         getRandomBoop()
-        
-
+        picture.image = picture.image!.createBorder()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -127,7 +126,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
             UIView.transitionWithView(self.picture,
                 duration: 0.4,
                 options: UIViewAnimationOptions.TransitionFlipFromBottom,
-                animations: { self.picture.image = newImage },
+                animations: { self.picture.image = newImage; self.picture.image = self.picture.image?.createBorder() },
                 completion: { finished in self.getHotSpot(); self.hotSpot.hidden = false; self.getRandomBoop() })
         }
     }
