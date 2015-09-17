@@ -13,7 +13,7 @@ import Foundation
 extension UIImage {
     
     func createBorder() -> UIImage {
-        // Create image contaxt
+        // Create image context
         UIGraphicsBeginImageContext(self.size)
         // Create a random color
 //        let red = CGFloat(arc4random() % 100) / 100.0
@@ -21,11 +21,7 @@ extension UIImage {
 //        let blue = CGFloat(arc4random() % 100) / 100.0
 //        let randomColor: UIColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 //        randomColor.setStroke()
-        let red: CGFloat = 78.0
-        let green: CGFloat = 148.0
-        let blue: CGFloat = 253
-        let alpha: CGFloat = 1.0
-        let frameColor: UIColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        let frameColor: UIColor = UIColor(red: 0.305, green: 0.58, blue: 0.992, alpha: 1.0)
         frameColor.setStroke()
         print(frameColor.description)
         // Get scale factor for border

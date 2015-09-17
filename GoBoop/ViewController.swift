@@ -83,9 +83,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     }, completion: {bool in
                         self.noseAnimation.hidden = true})
         })
-
-        
-        
     }
     
     func nextScreen() {
