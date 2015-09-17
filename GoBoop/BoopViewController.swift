@@ -42,18 +42,18 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        println("Subviews Laid out")
+        print("Subviews Laid out")
         getHotSpot()
         sizeHotspotToScreen()
     }
     
     func getHotSpot() {
         var filename: String = "Cloofy"
-        var imageNumber = String(currentImage)
+        let imageNumber = String(currentImage)
         filename += imageNumber
         filename += "boop"
         filename += ".png"
-        println("Hotspot: \(filename)")
+        print("Hotspot: \(filename)")
         let newHotSpot = UIImage(named:filename)
         hotSpot.image = newHotSpot!
         //        filename = "Cloofy"
@@ -66,24 +66,24 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         // Replaces hotspot image with one resized to the screen size
         
         let screenRect = UIScreen.mainScreen().bounds
-        println("Screen Rect = \(screenRect)")
+        print("Screen Rect = \(screenRect)")
         
         UIGraphicsBeginImageContextWithOptions(screenRect.size, false, 1.0)
         let context = UIGraphicsGetCurrentContext()
         hotSpot.contentMode = UIViewContentMode.ScaleAspectFit
-        hotSpot.layer.renderInContext(context)
+        hotSpot.layer.renderInContext(context!)
         let theImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        println("The Image from Context size = \(theImage.size)")
+        print("The Image from Context size = \(theImage.size)")
         hotSpot.image = theImage
-        println("Hotspot image size = \(hotSpot.image?.size)")
+        print("Hotspot image size = \(hotSpot.image?.size)")
         // Now we write the hotspot image to a file, then retrieve it
         // Saving and reloading corrects the image so that isPixelRed UIImage extension works properly
-        let documentsFolderPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
-        println(documentsFolderPath)
+        let documentsFolderPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] 
+        print(documentsFolderPath)
         let filename = "/hotSpotTemp.png"
         let writePath = documentsFolderPath + filename
-        let data: NSData = UIImagePNGRepresentation(hotSpot.image!)
+        let data: NSData = UIImagePNGRepresentation(hotSpot.image!)!
         data.writeToFile(writePath, atomically: true)
         
         hotSpot.image = UIImage(contentsOfFile: writePath)
@@ -97,18 +97,23 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         filename += boopNumber
         filename += ".caf"
         var error: NSError?
-        let thePath: String = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent(filename)
-        let theURL: NSURL = NSURL(fileURLWithPath: thePath)!
+        let thePath: String = NSBundle.mainBundle().resourcePath!
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent(filename)
         if error != nil {
-            println(error)
+            print(error)
         } else {
-            boopPlayer = AVAudioPlayer(contentsOfURL: theURL, error: &error)
+            do {
+                boopPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+            } catch var error1 as NSError {
+                error = error1
+                print(error1)
+            }
             boopPlayer.prepareToPlay()
             boopPlayer.delegate = self
         }
         
     }
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         currentImage++
         if currentImage > TOTAL_IMAGES {
             currentImage = 1
@@ -116,13 +121,13 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         if player == boopPlayer && flag {
             sizeHotspotToScreen()
             var filename = "Cloofy"
-            var imageNumber = String(currentImage)
+            let imageNumber = String(currentImage)
             filename += imageNumber
             filename += ".jpg"
-            println("Begin: \(filename)")
+            print("Begin: \(filename)")
             let newImage: UIImage? = UIImage(named: filename)
             hotSpot.hidden = true
-            var finished = true
+//            var finished = true
             UIView.transitionWithView(self.picture,
                 duration: 0.4,
                 options: UIViewAnimationOptions.TransitionFlipFromBottom,
@@ -131,11 +136,11 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func handleTap(UIGestureRecognizer) {
+    func handleTap(_: UIGestureRecognizer) {
         
-        println("Tap------------------------------------------------")
-        var thePoint: CGPoint = tapRec.locationInView(hotSpot)
-        println("Tap Point = \(thePoint)")
+        print("Tap------------------------------------------------")
+        let thePoint: CGPoint = tapRec.locationInView(hotSpot)
+        print("Tap Point = \(thePoint)")
         let success = hotSpot.image!.isPixelRed(thePoint)
         if success {
             boopPlayer.play()

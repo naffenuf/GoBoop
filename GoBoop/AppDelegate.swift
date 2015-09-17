@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         Appirater.appEnteredForeground(true)
-        Appirater.setDebug(true)
-        Appirater.setUsesUntilPrompt(7)
-        Appirater.setDaysUntilPrompt(5)
+        Appirater.setDebug(false)
+        Appirater.setUsesUntilPrompt(2)
+        Appirater.setDaysUntilPrompt(0.1)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

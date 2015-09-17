@@ -19,7 +19,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
         self.noseAnimation.hidden = true
 
         }
@@ -27,17 +30,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
      override func viewWillAppear(animated: Bool) {
         var error: NSError?
-        let thePath: String = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("CloofyTheBoopyDog.caf")
-        let theURL: NSURL = NSURL(fileURLWithPath: thePath)!
+        let thePath: String = NSBundle.mainBundle().resourcePath!
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("CloofyTheBoopyDog.caf")
         if error != nil {
-            println(error)
+            print(error)
         } else {
-            ukePlayer = AVAudioPlayer(contentsOfURL: theURL, error: &error)
+            do {
+                ukePlayer = try AVAudioPlayer(contentsOfURL: theURL)
+            } catch let error1 as NSError {
+                error = error1
+                print(error1)
+            }
             ukePlayer.delegate = self
     }
 }
 
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if player == ukePlayer {
                 self.blackView.hidden = false
                 self.nextScreen()
@@ -54,8 +62,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         imageArray.append(image2!)
         imageArray.append(image3!)
         
-        var centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
-        var finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
+        let centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
+        let finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
 
         UIView.animateWithDuration(1.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.view.removeConstraint(self.pointingFingerXConstraint)
