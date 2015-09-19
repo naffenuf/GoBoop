@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Appirater.appEnteredForeground(true)
         Appirater.setDebug(false)
         Appirater.setUsesUntilPrompt(2)
-        Appirater.setDaysUntilPrompt(0.1)
+        Appirater.setDaysUntilPrompt(0.01)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

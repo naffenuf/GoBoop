@@ -22,14 +22,28 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     let currentBoopSound = 1
     let tapRec = UITapGestureRecognizer()
     var boopPlayer: AVAudioPlayer = AVAudioPlayer()
+    var backgroundPlayer: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set up the boop player
         getRandomBoop()
         picture.image = picture.image!.createBorder()
+        // Play the background music in a loop
+        let thePath: String = NSBundle.mainBundle().resourcePath!
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("GoBoopLoop1.m4a")
+                    do {
+                backgroundPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+            } catch var error as NSError {
+                print(error)
+            }
+            backgroundPlayer.prepareToPlay()
+            backgroundPlayer.delegate = self
+            backgroundPlayer.numberOfLoops = -1
+            backgroundPlayer.volume = 0.3
+            backgroundPlayer.play()
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         hotSpot.addGestureRecognizer(tapRec)
         tapRec.addTarget(self, action: "handleTap:")
@@ -113,6 +127,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
     }
+    
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         currentImage++
         if currentImage > TOTAL_IMAGES {

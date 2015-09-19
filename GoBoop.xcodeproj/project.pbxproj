@@ -35,6 +35,8 @@
 		4439DE271B5E9EB500F1A87C /* BoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE261B5E9EB500F1A87C /* BoopViewController.swift */; };
 		4439DE291B5EA56D00F1A87C /* UIIMageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */; };
 		444A95991B62DD5E0050D811 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 444A95981B62DD5E0050D811 /* Images.xcassets */; };
+		448D61351BADE67A0051394B /* GoBoopLoop1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 448D61341BADE67A0051394B /* GoBoopLoop1.m4a */; settings = {ASSET_TAGS = (); }; };
+		448D61361BADE67A0051394B /* GoBoopLoop1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 448D61341BADE67A0051394B /* GoBoopLoop1.m4a */; settings = {ASSET_TAGS = (); }; };
 		44F3925B1B7D07440067930D /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F391F61B7D07440067930D /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		44F3925C1B7D07440067930D /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 44F391F71B7D07440067930D /* Appirater.podspec.json */; };
 		44F3925D1B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F391FA1B7D07440067930D /* AppiraterLocalizable.strings */; };
@@ -119,6 +121,7 @@
 		4439DE261B5E9EB500F1A87C /* BoopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoopViewController.swift; sourceTree = "<group>"; };
 		4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIMageExtension.swift; sourceTree = "<group>"; };
 		444A95981B62DD5E0050D811 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		448D61341BADE67A0051394B /* GoBoopLoop1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoBoopLoop1.m4a; sourceTree = "<group>"; };
 		44F391F41B7D07430067930D /* GoBoop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoBoop-Bridging-Header.h"; sourceTree = "<group>"; };
 		44F391F51B7D07440067930D /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		44F391F61B7D07440067930D /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 				44037DD71B699776008CD550 /* Boop18.caf */,
 				441526801B604A9A000A9D2C /* Boop2Sound.caf */,
 				44037DEC1B6A398A008CD550 /* CloofyTheBoopyDog.caf */,
+				448D61341BADE67A0051394B /* GoBoopLoop1.m4a */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -242,6 +246,42 @@
 				444A95981B62DD5E0050D811 /* Images.xcassets */,
 				4439DE0A1B5E9E6F00F1A87C /* Main.storyboard */,
 				4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */,
+				448D61301BADE63D0051394B /* Appirater */,
+				4439DE041B5E9E6F00F1A87C /* Supporting Files */,
+				44F391F41B7D07430067930D /* GoBoop-Bridging-Header.h */,
+			);
+			path = GoBoop;
+			sourceTree = "<group>";
+		};
+		4439DE041B5E9E6F00F1A87C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4415267F1B604A65000A9D2C /* Resources */,
+				4439DE051B5E9E6F00F1A87C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4439DE191B5E9E6F00F1A87C /* GoBoopTests */ = {
+			isa = PBXGroup;
+			children = (
+				4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */,
+				4439DE1A1B5E9E6F00F1A87C /* Supporting Files */,
+			);
+			path = GoBoopTests;
+			sourceTree = "<group>";
+		};
+		4439DE1A1B5E9E6F00F1A87C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4439DE1B1B5E9E6F00F1A87C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		448D61301BADE63D0051394B /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
 				44F391F51B7D07440067930D /* Appirater.h */,
 				44F391F61B7D07440067930D /* Appirater.m */,
 				44F391F71B7D07440067930D /* Appirater.podspec.json */,
@@ -280,36 +320,8 @@
 				44F392521B7D07440067930D /* vi.lproj */,
 				44F392551B7D07440067930D /* zh-Hans.lproj */,
 				44F392581B7D07440067930D /* zh-Hant.lproj */,
-				4439DE041B5E9E6F00F1A87C /* Supporting Files */,
-				44F391F41B7D07430067930D /* GoBoop-Bridging-Header.h */,
 			);
-			path = GoBoop;
-			sourceTree = "<group>";
-		};
-		4439DE041B5E9E6F00F1A87C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4415267F1B604A65000A9D2C /* Resources */,
-				4439DE051B5E9E6F00F1A87C /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4439DE191B5E9E6F00F1A87C /* GoBoopTests */ = {
-			isa = PBXGroup;
-			children = (
-				4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */,
-				4439DE1A1B5E9E6F00F1A87C /* Supporting Files */,
-			);
-			path = GoBoopTests;
-			sourceTree = "<group>";
-		};
-		4439DE1A1B5E9E6F00F1A87C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4439DE1B1B5E9E6F00F1A87C /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Appirater;
 			sourceTree = "<group>";
 		};
 		44F391F91B7D07440067930D /* ar.lproj */ = {
@@ -690,6 +702,7 @@
 				44037DDC1B699776008CD550 /* Boop5.caf in Resources */,
 				44F3926C1B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F392691B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
+				448D61351BADE67A0051394B /* GoBoopLoop1.m4a in Resources */,
 				44F392601B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F392621B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F3925E1B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
@@ -745,6 +758,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448D61361BADE67A0051394B /* GoBoopLoop1.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

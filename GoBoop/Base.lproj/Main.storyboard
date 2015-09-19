@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE BOOPY DOG" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-JE-xci">
-                                <rect key="frame" x="111" y="548" width="378" height="44"/>
+                                <rect key="frame" x="110" y="548" width="378" height="44"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="49"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                             <constraint firstAttribute="centerY" secondItem="i2T-kl-1cL" secondAttribute="centerY" id="IJg-Nf-du1"/>
                             <constraint firstItem="be2-eB-fa0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Lm3-jN-Y5I"/>
                             <constraint firstItem="q9e-JE-xci" firstAttribute="top" secondItem="i2T-kl-1cL" secondAttribute="bottom" constant="8" symbolic="YES" id="Obw-qM-8eM"/>
-                            <constraint firstAttribute="centerX" secondItem="q9e-JE-xci" secondAttribute="centerX" id="S5t-5X-cCO"/>
+                            <constraint firstAttribute="centerX" secondItem="q9e-JE-xci" secondAttribute="centerX" constant="1" id="S5t-5X-cCO"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" constant="1" id="Y8p-Jr-gzl"/>
                             <constraint firstItem="UNg-59-g3v" firstAttribute="width" secondItem="UNg-59-g3v" secondAttribute="height" multiplier="1:1" id="YbE-DD-YyM"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" id="Zzb-CR-khQ"/>

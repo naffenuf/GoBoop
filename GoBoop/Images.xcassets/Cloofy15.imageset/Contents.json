@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Cloofy15.jpg"
+      "filename" : "Cloofy15.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
