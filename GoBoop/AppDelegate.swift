@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Appirater.setAppId("YK2P4635JK.com.InternetAndMedia.GoBoop")
         Appirater.appLaunched(true)
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
         return true
     }
 

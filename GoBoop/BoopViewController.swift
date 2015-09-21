@@ -26,9 +26,10 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNeedsStatusBarAppearanceUpdate()
+
         // Set up the boop player
         getRandomBoop()
-        picture.image = picture.image!.createBorder()
         // Play the background music in a loop
         let thePath: String = NSBundle.mainBundle().resourcePath!
         let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("GoBoopLoop1.m4a")
@@ -42,6 +43,9 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
             backgroundPlayer.numberOfLoops = -1
             backgroundPlayer.volume = 0.3
             backgroundPlayer.play()
+        // Give the picture a border with UIIMage class extension
+        picture.image = picture.image!.createBorder()
+
     }
 
     override func viewDidAppear(animated: Bool) {

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Foundation
 
 extension UIImage {
     
@@ -23,7 +22,7 @@ extension UIImage {
 //        randomColor.setStroke()
         let frameColor: UIColor = UIColor(red: 0.305, green: 0.58, blue: 0.992, alpha: 1.0)
         frameColor.setStroke()
-        print(frameColor.description)
+        print("frame color = \(frameColor.description)")
         // Get scale factor for border
         let orientation = UIApplication.sharedApplication().statusBarOrientation
         let screenWidth = UIScreen.mainScreen().bounds.width

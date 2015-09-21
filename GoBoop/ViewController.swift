@@ -16,7 +16,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var pointingFingerXConstraint: NSLayoutConstraint!
     @IBOutlet weak var blackView: UIView!
     var ukePlayer = AVAudioPlayer()
-    
+    var boopPlayer = AVAudioPlayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
@@ -24,9 +25,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         } catch _ {
         }
         self.noseAnimation.hidden = true
-
+        self.setNeedsStatusBarAppearanceUpdate()
+        // Load a boop player for end of animation
+        var error: NSError?
+        let thePath: String = NSBundle.mainBundle().resourcePath!
+        let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("Boop2.caf")
+        if error != nil {
+            print(error)
+        } else {
+            do {
+                boopPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+            } catch var error1 as NSError {
+                error = error1
+                print(error1)
+            }
+            boopPlayer.prepareToPlay()
+            boopPlayer.delegate = self
         }
-    
+    }
     
      override func viewWillAppear(animated: Bool) {
         var error: NSError?
@@ -65,7 +81,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         let centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
         let finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
 
-        UIView.animateWithDuration(1.5, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.view.removeConstraint(self.pointingFingerXConstraint)
             self.view.addConstraint(centerFingerConstraint)
             self.view.layoutIfNeeded()
@@ -79,7 +95,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     self.noseAnimation.animationRepeatCount = 6
                     self.noseAnimation.animationDuration = 0.2
                     self.noseAnimation.startAnimating()
-                    
+                    self.boopPlayer.play()
                     }, completion: {bool in
                         self.noseAnimation.hidden = true})
         })
@@ -90,9 +106,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -125,19 +125,35 @@
                             <imageView contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocumentsCloofy4boop" translatesAutoresizingMaskIntoConstraints="NO" id="sum-dW-23u">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-polka-dot-wallpaper-7" translatesAutoresizingMaskIntoConstraints="NO" id="Gnv-qe-CBW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloofy1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub5-iz-zuG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goBoopFinalCornerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ybq-j4-Kyb">
+                                <rect key="frame" x="0.0" y="527" width="103" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="sy2-OF-gkg"/>
+                                    <constraint firstAttribute="width" constant="103" id="tXh-dO-Xtf"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Gnv-qe-CBW" firstAttribute="top" secondItem="UPe-U4-6rN" secondAttribute="top" id="9g6-C8-UnE"/>
+                            <constraint firstItem="JOD-Y6-NVh" firstAttribute="top" secondItem="Gnv-qe-CBW" secondAttribute="bottom" id="AAy-hr-e5c"/>
                             <constraint firstItem="sum-dW-23u" firstAttribute="top" secondItem="UPe-U4-6rN" secondAttribute="top" id="Flh-Mi-Jkn"/>
+                            <constraint firstItem="JOD-Y6-NVh" firstAttribute="top" secondItem="Ybq-j4-Kyb" secondAttribute="bottom" id="GNm-0P-Cdd"/>
+                            <constraint firstItem="Gnv-qe-CBW" firstAttribute="leading" secondItem="UPe-U4-6rN" secondAttribute="leading" id="Vag-2h-qlj"/>
                             <constraint firstAttribute="trailing" secondItem="Ub5-iz-zuG" secondAttribute="trailing" id="Wnt-qA-OZu"/>
                             <constraint firstItem="Ub5-iz-zuG" firstAttribute="top" secondItem="UPe-U4-6rN" secondAttribute="top" id="X2t-r6-qa6"/>
                             <constraint firstItem="JOD-Y6-NVh" firstAttribute="top" secondItem="sum-dW-23u" secondAttribute="bottom" id="eBm-NR-YQH"/>
                             <constraint firstItem="sum-dW-23u" firstAttribute="leading" secondItem="UPe-U4-6rN" secondAttribute="leading" id="eT7-pc-gax"/>
                             <constraint firstAttribute="trailing" secondItem="sum-dW-23u" secondAttribute="trailing" id="gau-3w-aIS"/>
+                            <constraint firstItem="Ybq-j4-Kyb" firstAttribute="leading" secondItem="Ub5-iz-zuG" secondAttribute="leading" id="h5e-n6-sRx"/>
                             <constraint firstItem="JOD-Y6-NVh" firstAttribute="top" secondItem="Ub5-iz-zuG" secondAttribute="bottom" id="vPJ-FN-e2N"/>
+                            <constraint firstAttribute="trailing" secondItem="Gnv-qe-CBW" secondAttribute="trailing" id="xaH-NX-5qz"/>
                             <constraint firstItem="Ub5-iz-zuG" firstAttribute="leading" secondItem="UPe-U4-6rN" secondAttribute="leading" id="zx5-ju-bvl"/>
                         </constraints>
                     </view>
@@ -157,5 +173,7 @@
         <image name="DocumentsCloofy4boop" width="375" height="667"/>
         <image name="NoseImage1" width="904" height="904"/>
         <image name="PointingFingerWithSleeve" width="1024" height="276"/>
+        <image name="goBoopFinalCornerLogo" width="271" height="243"/>
+        <image name="red-polka-dot-wallpaper-7" width="1024" height="768"/>
     </resources>
 </document>
