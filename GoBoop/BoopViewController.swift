@@ -26,8 +26,9 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set the statusbar style to light
         self.setNeedsStatusBarAppearanceUpdate()
-
+        // Listen for applicationDidBecomeActive
         // Set up the boop player
         getRandomBoop()
         // Play the background music in a loop
@@ -47,7 +48,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         picture.image = picture.image!.createBorder()
         self.setNeedsStatusBarAppearanceUpdate()
     }
-    
+       
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
