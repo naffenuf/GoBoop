@@ -45,7 +45,11 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
             backgroundPlayer.play()
         // Give the picture a border with UIIMage class extension
         picture.image = picture.image!.createBorder()
-
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
     override func viewDidAppear(animated: Bool) {
