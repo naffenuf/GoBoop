@@ -16,7 +16,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var hotSpot: UIImageView!
-    let TOTAL_IMAGES = 20 // change this when adding more images
+    let TOTAL_IMAGES = 25 // change this when adding more images
     let TOTAL_BOOP_SOUNDS = 18 // change this when adding more boop sound files
     var currentImage = 1
     let currentBoopSound = 1

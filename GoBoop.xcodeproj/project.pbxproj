@@ -27,7 +27,6 @@
 		4439DE071B5E9E6F00F1A87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */; };
 		4439DE091B5E9E6F00F1A87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE081B5E9E6F00F1A87C /* ViewController.swift */; };
 		4439DE0C1B5E9E6F00F1A87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4439DE0A1B5E9E6F00F1A87C /* Main.storyboard */; };
-		4439DE111B5E9E6F00F1A87C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */; };
 		4439DE1D1B5E9E6F00F1A87C /* GoBoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */; };
 		4439DE271B5E9EB500F1A87C /* BoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE261B5E9EB500F1A87C /* BoopViewController.swift */; };
 		4439DE291B5EA56D00F1A87C /* UIIMageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */; };
@@ -37,6 +36,7 @@
 		44AC89661BB1BE9700D56B7F /* Boop18.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44AC89651BB1BE9700D56B7F /* Boop18.caf */; settings = {ASSET_TAGS = (); }; };
 		44AC89681BB1BE9F00D56B7F /* Boop5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44AC89671BB1BE9F00D56B7F /* Boop5.caf */; settings = {ASSET_TAGS = (); }; };
 		44AC896A1BB1BEA500D56B7F /* Boop8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 44AC89691BB1BEA500D56B7F /* Boop8.caf */; settings = {ASSET_TAGS = (); }; };
+		44B67EF41BB1E5EF00378E1A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B67EF31BB1E5EF00378E1A /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		44F3925B1B7D07440067930D /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F391F61B7D07440067930D /* Appirater.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		44F3925C1B7D07440067930D /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 44F391F71B7D07440067930D /* Appirater.podspec.json */; };
 		44F3925D1B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F391FA1B7D07440067930D /* AppiraterLocalizable.strings */; };
@@ -111,7 +111,6 @@
 		4439DE061B5E9E6F00F1A87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4439DE081B5E9E6F00F1A87C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4439DE0B1B5E9E6F00F1A87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4439DE101B5E9E6F00F1A87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4439DE161B5E9E6F00F1A87C /* GoBoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoBoopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4439DE1B1B5E9E6F00F1A87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4439DE1C1B5E9E6F00F1A87C /* GoBoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBoopTests.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		44AC89651BB1BE9700D56B7F /* Boop18.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop18.caf; sourceTree = "<group>"; };
 		44AC89671BB1BE9F00D56B7F /* Boop5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop5.caf; sourceTree = "<group>"; };
 		44AC89691BB1BEA500D56B7F /* Boop8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boop8.caf; sourceTree = "<group>"; };
+		44B67EF31BB1E5EF00378E1A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		44F391F41B7D07430067930D /* GoBoop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoBoop-Bridging-Header.h"; sourceTree = "<group>"; };
 		44F391F51B7D07440067930D /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
 		44F391F61B7D07440067930D /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 				4439DE281B5EA56D00F1A87C /* UIIMageExtension.swift */,
 				444A95981B62DD5E0050D811 /* Images.xcassets */,
 				4439DE0A1B5E9E6F00F1A87C /* Main.storyboard */,
-				4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */,
+				44B67EF31BB1E5EF00378E1A /* Launch Screen.storyboard */,
 				448D61301BADE63D0051394B /* Appirater */,
 				4439DE041B5E9E6F00F1A87C /* Supporting Files */,
 				44F391F41B7D07430067930D /* GoBoop-Bridging-Header.h */,
@@ -740,7 +740,6 @@
 				44037DE61B699776008CD550 /* Boop15.caf in Resources */,
 				44F392681B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				444A95991B62DD5E0050D811 /* Images.xcassets in Resources */,
-				4439DE111B5E9E6F00F1A87C /* LaunchScreen.xib in Resources */,
 				44AC89681BB1BE9F00D56B7F /* Boop5.caf in Resources */,
 				44F392721B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44037DED1B6A398A008CD550 /* CloofyTheBoopyDog.caf in Resources */,
@@ -748,6 +747,7 @@
 				44F392651B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F3926D1B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F3927B1B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
+				44B67EF41BB1E5EF00378E1A /* Launch Screen.storyboard in Resources */,
 				44F392711B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44F3927D1B7D07440067930D /* AppiraterLocalizable.strings in Resources */,
 				44037DE11B699776008CD550 /* Boop10.caf in Resources */,
@@ -804,14 +804,6 @@
 				4439DE0B1B5E9E6F00F1A87C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4439DE0F1B5E9E6F00F1A87C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4439DE101B5E9E6F00F1A87C /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 		44F391FA1B7D07440067930D /* AppiraterLocalizable.strings */ = {
