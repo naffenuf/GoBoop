@@ -56,7 +56,6 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidAppear(animated: Bool) {
         hotSpot.addGestureRecognizer(tapRec)
         tapRec.addTarget(self, action: "handleTap:")
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,10 +78,6 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         print("Hotspot: \(filename)")
         let newHotSpot = UIImage(named:filename)
         hotSpot.image = newHotSpot!
-        //        filename = "Cloofy"
-        //        filename += imageNumber
-        //        filename += ".jpg"
-        //        let newImage = UIImage(named: filename)
     }
     
     func sizeHotspotToScreen() {

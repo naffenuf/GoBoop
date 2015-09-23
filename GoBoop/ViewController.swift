@@ -16,7 +16,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var pointingFingerXConstraint: NSLayoutConstraint!
     @IBOutlet weak var blackView: UIView!
     var ukePlayer = AVAudioPlayer()
-    var boopPlayer = AVAudioPlayer()
+    var introBoopPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             print(error)
         } else {
             do {
-                boopPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+                introBoopPlayer = try AVAudioPlayer(contentsOfURL: theURL)
             } catch var error1 as NSError {
                 error = error1
                 print(error1)
             }
-            boopPlayer.prepareToPlay()
-            boopPlayer.delegate = self
+            introBoopPlayer.prepareToPlay()
+            introBoopPlayer.delegate = self
         }
     }
     
@@ -95,7 +95,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     self.noseAnimation.animationRepeatCount = 6
                     self.noseAnimation.animationDuration = 0.2
                     self.noseAnimation.startAnimating()
-                    self.boopPlayer.play()
+                    self.introBoopPlayer.play()
                     }, completion: {bool in
                         self.noseAnimation.hidden = true})
         })
@@ -103,18 +103,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     func nextScreen() {
         self.performSegueWithIdentifier("boopViewSegue", sender: self)
-
     }
-    
-//    override func prefersStatusBarHidden() -> Bool {
-//        return true
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

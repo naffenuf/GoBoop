@@ -26,21 +26,21 @@
                                     <constraint firstAttribute="width" secondItem="4lU-F6-8TE" secondAttribute="height" multiplier="1:1" id="BUa-JJ-qHZ"/>
                                 </constraints>
                             </imageView>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZvN-ZJ-kub">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvN-ZJ-kub">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ZvN-ZJ-kub" firstAttribute="leading" secondItem="6wQ-CL-WCu" secondAttribute="leadingMargin" constant="-16" id="DuY-OK-Hhn"/>
+                            <constraint firstItem="ZvN-ZJ-kub" firstAttribute="leading" secondItem="6wQ-CL-WCu" secondAttribute="leadingMargin" constant="-20" id="DuY-OK-Hhn"/>
                             <constraint firstItem="4lU-F6-8TE" firstAttribute="height" relation="lessThanOrEqual" secondItem="6wQ-CL-WCu" secondAttribute="height" multiplier="0.8" priority="979" id="Ub6-6U-oGh"/>
                             <constraint firstItem="ZvN-ZJ-kub" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Uch-gS-x36"/>
                             <constraint firstAttribute="centerX" secondItem="4lU-F6-8TE" secondAttribute="centerX" constant="-0.5" id="VJb-Zx-VNw"/>
                             <constraint firstItem="4lU-F6-8TE" firstAttribute="width" relation="lessThanOrEqual" secondItem="6wQ-CL-WCu" secondAttribute="width" multiplier="0.8" id="cMw-2n-OWX"/>
                             <constraint firstAttribute="centerY" secondItem="4lU-F6-8TE" secondAttribute="centerY" id="isV-UO-T6F"/>
                             <constraint firstItem="ZvN-ZJ-kub" firstAttribute="centerY" secondItem="4lU-F6-8TE" secondAttribute="centerY" id="kl7-tH-EJd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZvN-ZJ-kub" secondAttribute="trailing" constant="-16" id="wcy-OH-W73"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZvN-ZJ-kub" secondAttribute="trailing" constant="-20" id="wcy-OH-W73"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -41,7 +41,6 @@
 		44F3925C1B7D07440067930D /* Appirater.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 44F391F71B7D07440067930D /* Appirater.podspec.json */; };
 		44F3925D1B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F391FA1B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F3925E1B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F391FD1B7D07440067930D /* AppiraterLocalizable.strings */; };
-		44F3925F1B7D07440067930D /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 44F391FF1B7D07440067930D /* CHANGELOG.md */; };
 		44F392601B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392011B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392611B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392041B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392621B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392071B7D07440067930D /* AppiraterLocalizable.strings */; };
@@ -62,7 +61,6 @@
 		44F392711B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392341B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392721B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392371B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392731B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F3923A1B7D07440067930D /* AppiraterLocalizable.strings */; };
-		44F392741B7D07440067930D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 44F3923C1B7D07440067930D /* README.md */; };
 		44F392751B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F3923E1B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392761B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392411B7D07440067930D /* AppiraterLocalizable.strings */; };
 		44F392771B7D07440067930D /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F392441B7D07440067930D /* AppiraterLocalizable.strings */; };
@@ -129,7 +127,6 @@
 		44F391F81B7D07440067930D /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		44F391FB1B7D07440067930D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F391FE1B7D07440067930D /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
-		44F391FF1B7D07440067930D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		44F392021B7D07440067930D /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F392051B7D07440067930D /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F392081B7D07440067930D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
@@ -150,7 +147,6 @@
 		44F392351B7D07440067930D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F392381B7D07440067930D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F3923B1B7D07440067930D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
-		44F3923C1B7D07440067930D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		44F3923F1B7D07440067930D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F392421B7D07440067930D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
 		44F392451B7D07440067930D /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
@@ -288,7 +284,6 @@
 				44F391F81B7D07440067930D /* AppiraterDelegate.h */,
 				44F391F91B7D07440067930D /* ar.lproj */,
 				44F391FC1B7D07440067930D /* ca.lproj */,
-				44F391FF1B7D07440067930D /* CHANGELOG.md */,
 				44F392001B7D07440067930D /* cs.lproj */,
 				44F392031B7D07440067930D /* da.lproj */,
 				44F392061B7D07440067930D /* de.lproj */,
@@ -309,7 +304,6 @@
 				44F392331B7D07440067930D /* pl.lproj */,
 				44F392361B7D07440067930D /* pt-BR.lproj */,
 				44F392391B7D07440067930D /* pt.lproj */,
-				44F3923C1B7D07440067930D /* README.md */,
 				44F3923D1B7D07440067930D /* ro.lproj */,
 				44F392401B7D07440067930D /* ru.lproj */,
 				44F392431B7D07440067930D /* sk.lproj */,
@@ -770,9 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4439DE091B5E9E6F00F1A87C /* ViewController.swift in Sources */,
-				44F3925F1B7D07440067930D /* CHANGELOG.md in Sources */,
 				44F3925B1B7D07440067930D /* Appirater.m in Sources */,
-				44F392741B7D07440067930D /* README.md in Sources */,
 				4439DE071B5E9E6F00F1A87C /* AppDelegate.swift in Sources */,
 				4439DE271B5E9EB500F1A87C /* BoopViewController.swift in Sources */,
 				4439DE291B5EA56D00F1A87C /* UIIMageExtension.swift in Sources */,

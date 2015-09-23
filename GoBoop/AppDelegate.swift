@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Appirater.setAppId("YK2P4635JK.com.InternetAndMedia.GoBoop")
+        Appirater.setAppId("1020751370")
         Appirater.appLaunched(true)
         application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Appirater.setDebug(false)
         Appirater.setUsesUntilPrompt(10)
         Appirater.setDaysUntilPrompt(7)
+        Appirater.setTimeBeforeReminding(2)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

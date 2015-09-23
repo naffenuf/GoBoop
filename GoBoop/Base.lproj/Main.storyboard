@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" secondItem="zfY-MY-MkY" secondAttribute="height" multiplier="1:1" id="BHB-IW-6ef"/>
                                 </constraints>
                             </imageView>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="be2-eB-fa0">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be2-eB-fa0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -59,7 +59,7 @@
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="top" secondItem="s5n-ac-AbJ" secondAttribute="bottom" constant="8" symbolic="YES" id="0NU-xY-Zls"/>
-                            <constraint firstItem="be2-eB-fa0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1I7-hx-BK8"/>
+                            <constraint firstItem="be2-eB-fa0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1I7-hx-BK8"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="centerX" secondItem="UNg-59-g3v" secondAttribute="centerX" constant="1" id="5lm-BB-p36"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-76" id="9uy-hs-GaF"/>
                             <constraint firstItem="q9e-JE-xci" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="B8z-iB-fzg"/>
@@ -84,7 +84,7 @@
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="q9e-JE-xci" secondAttribute="trailing" constant="20" id="qoP-PG-JNY"/>
                             <constraint firstItem="zfY-MY-MkY" firstAttribute="left" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" constant="-76" id="txt-ue-wgd"/>
                             <constraint firstItem="i2T-kl-1cL" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="u7c-PO-iNR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="be2-eB-fa0" secondAttribute="trailing" constant="-16" id="vXh-1N-jJn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="be2-eB-fa0" secondAttribute="trailing" constant="-20" id="vXh-1N-jJn"/>
                             <constraint firstAttribute="centerY" secondItem="UNg-59-g3v" secondAttribute="centerY" constant="-0.5" id="vfW-Hj-Ck6"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -125,7 +125,7 @@
                             <imageView contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocumentsCloofy4boop" translatesAutoresizingMaskIntoConstraints="NO" id="sum-dW-23u">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-polka-dot-wallpaper-7" translatesAutoresizingMaskIntoConstraints="NO" id="Gnv-qe-CBW">
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-polka-dot-wallpaper-7" translatesAutoresizingMaskIntoConstraints="NO" id="Gnv-qe-CBW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloofy1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub5-iz-zuG">
