@@ -42,7 +42,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
             backgroundPlayer.prepareToPlay()
             backgroundPlayer.delegate = self
             backgroundPlayer.numberOfLoops = -1
-            backgroundPlayer.volume = 0.3
+            backgroundPlayer.volume = 0.4
             backgroundPlayer.play()
         // Give the picture a border with UIIMage class extension
         picture.image = picture.image!.createBorder()
