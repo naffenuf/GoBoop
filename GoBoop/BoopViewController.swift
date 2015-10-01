@@ -36,6 +36,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("GoBoopLoop1.m4a")
                     do {
                 backgroundPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+            // the warning on the line below (if still there) seems to be a bug in Xcode
             } catch var error as NSError {
                 print(error)
             }
@@ -50,6 +51,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
     }
        
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        // change the color of the status bar to make visible on dark background
         return UIStatusBarStyle.LightContent
     }
 
@@ -69,6 +71,8 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         sizeHotspotToScreen()
     }
     
+    
+    // Assembles file name for the hidden image that we will pixel test to see if user touched nose
     func getHotSpot() {
         var filename: String = "Cloofy"
         let imageNumber = String(currentImage)
@@ -107,7 +111,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         hotSpot.image = UIImage(contentsOfFile: writePath)
         
     }
-    
+    // Selects a random "boop" audio file from the available selection
     func getRandomBoop() {
         let rnd = (arc4random() % 17) + 1 // Change this when adding more boop sounds
         var filename = "Boop"
@@ -122,6 +126,8 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         } else {
             do {
                 boopPlayer = try AVAudioPlayer(contentsOfURL: theURL)
+        // Attempted to fixthe warning on the line below (if still there) - seems to be a bug in Xcode
+
             } catch var error1 as NSError {
                 error = error1
                 print(error1)
@@ -131,7 +137,7 @@ class BoopViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
     }
-    
+    // after boop sound, flip to next picture and hotspot image
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         currentImage++
         if currentImage > TOTAL_IMAGES {

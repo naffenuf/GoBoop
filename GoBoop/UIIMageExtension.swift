@@ -14,12 +14,6 @@ extension UIImage {
     func createBorder() -> UIImage {
         // Create image context
         UIGraphicsBeginImageContext(self.size)
-        // Create a random color
-//        let red = CGFloat(arc4random() % 100) / 100.0
-//        let green = CGFloat(arc4random() % 100) / 100.0
-//        let blue = CGFloat(arc4random() % 100) / 100.0
-//        let randomColor: UIColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-//        randomColor.setStroke()
         let frameColor: UIColor = UIColor(red: 0.305, green: 0.58, blue: 0.992, alpha: 1.0)
         frameColor.setStroke()
         print("frame color = \(frameColor.description)")
@@ -43,6 +37,9 @@ extension UIImage {
         return result
     }
     
+    // The following function takes an average of all the colors in the Cloofy image
+    // to use for the frame.  Left this in just in case, but the solid color looks better
+    
 //    func averageColor() -> UIColor {
 //        
 //        let rgba = UnsafeMutablePointer<CUnsignedChar>.alloc(4)
@@ -64,6 +61,7 @@ extension UIImage {
 //        }
 //    }
     
+    // Pixel test tapped position to see if it is over red color on the hotspot image.  
     func isPixelRed(pos: CGPoint) -> Bool {
         
         let pixelData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage))

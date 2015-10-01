@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Set up Appirater -- reminds user to rate app
         Appirater.setAppId("1020751370")
         Appirater.appLaunched(true)
         application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
@@ -33,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
+        // Appirater options
         Appirater.appEnteredForeground(true)
         Appirater.setDebug(false)
         Appirater.setUsesUntilPrompt(10)

@@ -20,10 +20,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Make audio player override mute switch since audio is critical to experience
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         } catch _ {
         }
+        // Animation for launch screen - hand comes out, touches nose, plays boop sound
         self.noseAnimation.hidden = true
         self.setNeedsStatusBarAppearanceUpdate()
         // Load a boop player for end of animation
@@ -45,6 +47,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
      override func viewWillAppear(animated: Bool) {
+        // Play intro Ukulele
         var error: NSError?
         let thePath: String = NSBundle.mainBundle().resourcePath!
         let theURL: NSURL = NSURL(fileURLWithPath: thePath).URLByAppendingPathComponent("CloofyTheBoopyDog.caf")
@@ -64,12 +67,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if player == ukePlayer {
                 self.blackView.hidden = false
-                self.nextScreen()
+                self.nextScreen()  // proceed to game
         }
     }
     
     override func viewDidAppear(animated: Bool) {
         ukePlayer.play()
+        // png sequence animates around nose during boop sound
         var imageArray: [UIImage] = []
         let image1 = UIImage(named: "NoseImage1")
         let image2 = UIImage(named: "NoseImage2")
@@ -77,7 +81,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         imageArray.append(image1!)
         imageArray.append(image2!)
         imageArray.append(image3!)
-        
+        // Animate constraints of hand to touch Cloofy's nose
         let centerFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
         let finalFingerConstraint = NSLayoutConstraint(item: pointingFinger, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 80.0)
 
